@@ -96,9 +96,24 @@ spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-## Diagrama del microservivio
+## Diagramas del microservicio
+Endpoint y dependencias internas
 
-*Agregar*
+``` mermaid
+flowchart LR
+%% Estilos globales
+%% ----------------------------------------
+classDef service fill:#e8f1ff,stroke:#3a6ea5,stroke-width:2px,color:#0b2545,rx:10,ry:10;
+classDef db fill:#fff4d6,stroke:#b68b00,stroke-width:2px,color:#4e3b00,rx:10,ry:10;
+classDef op fill:#e2ffe9,stroke:#41a35a,stroke-width:2px,color:#1a4e26,rx:10,ry:10;
+    subgraph Tarifa_Service ["tarifa_service"]
+
+        C1[POST /tarifas/calcular]:::service --> C2[(Tarifa)]:::db
+        C2 -->|Retorna CostoResponseDTO| C3[Costo Final]:::op
+
+    end
+```
+
 ## Colaboradores
 
 > * Langenheim, Geronimo V.
