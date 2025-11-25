@@ -116,7 +116,7 @@ classDef op fill:#e2ffe9,stroke:#41a35a,stroke-width:2px,color:#1a4e26,rx:10,ry:
 
 Diagrama C4
 
-```
+``` mermaid
 %% Estilos globales
 graph TD
 classDef ms fill:#e3f2fd,stroke:#64b5f6,stroke-width:2px,color:#0d47a1,rx:10px,ry:10px;
