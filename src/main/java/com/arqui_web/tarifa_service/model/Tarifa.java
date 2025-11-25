@@ -2,9 +2,20 @@ package com.arqui_web.tarifa_service.model;
 
 import com.arqui_web.tarifa_service.dto.TarifaResponseDTO;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Tarifa {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column
 	private TipoTarifa tipo;
+	@Column
 	private Double montoKm;
 
 	public Tarifa() {
