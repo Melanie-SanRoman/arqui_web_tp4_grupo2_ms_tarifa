@@ -114,6 +114,29 @@ classDef op fill:#e2ffe9,stroke:#41a35a,stroke-width:2px,color:#1a4e26,rx:10,ry:
     end
 ```
 
+Diagrama C4
+
+```
+%% Estilos globales
+graph TD
+classDef ms fill:#e3f2fd,stroke:#64b5f6,stroke-width:2px,color:#0d47a1,rx:10px,ry:10px;
+classDef db fill:#fff3e0,stroke:#ffb74d,stroke-width:2px,color:#e65100,rx:10px,ry:10px;
+classDef comp fill:#e8f5e9,stroke:#81c784,stroke-width:2px,color:#1b5e20,rx:10px,ry:10px;
+classDef persona fill:#fce4ec,stroke:#f06292,stroke-width:2px,color:#880e4f,rx:10px,ry:10px;
+classDef relation stroke-dasharray: 5 5;
+
+subgraph tarifa_service
+    controller([TarifaController]):::comp
+    service([TarifaService]):::comp
+    repo[(TarifaRepository)]:::db
+    entity[[Tarifa]]:::comp
+end
+
+controller --> service
+service --> repo
+service --> entity
+```
+
 ## Colaboradores
 
 > * Langenheim, Geronimo V.
