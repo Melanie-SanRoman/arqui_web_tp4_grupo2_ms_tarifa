@@ -33,6 +33,12 @@ Responsabilidades de `tarifa_service`:
 
 ## Endoints disponibles
 
+### Documentacion Swagger / OpenAPI
+- Este microservicio expone su documentación interactiva en:
+> [Swagger UI](http://localhost:8082/swagger-ui/index.html)
+
+---
+
 * POST `/api/tarifas/calcular` -> Calcular costo.
 * Recibe: `CostoRequestDTO.java`.
 
@@ -75,8 +81,6 @@ Responsabilidades de `tarifa_service`:
 * Spring Web
 * Spring Data JPA
 * MySQL
-
-Pendientes de agregar: 
 * Swagger
 * Autenticacion JWT
 
@@ -113,6 +117,16 @@ classDef op fill:#e2ffe9,stroke:#41a35a,stroke-width:2px,color:#1a4e26,rx:10,ry:
 
     end
 ```
+
+Este MS se concentra exclusivamente en:
+
+* Buscar la tarifa adecuada.
+* Calcular el costo final.
+* Devolver un DTO limpio y reutilizable.
+
+Su independencia justifica la escalabilidad horizontal y permite cambiar la política de tarifas sin afectar otros MS.
+
+---
 
 Diagrama C4
 
