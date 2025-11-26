@@ -35,7 +35,7 @@ public class JwtUtils {
 			getClaims(token);
 			return true;
 		} catch (Exception e) {
-			System.out.println("Jwt Token: " + e.getMessage());
+			System.out.println("Token invalido: " + e.getMessage());
 			return false;
 		}
 	}
